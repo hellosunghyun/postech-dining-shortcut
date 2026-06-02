@@ -56,17 +56,8 @@ p {
 }
 
 .downloads p {
-  margin-top: 4px;
+  margin: 4px 0 18px;
   font-size: 15px;
-}
-
-.downloads .fallback {
-  display: inline-block;
-  margin-top: 8px;
-  padding: 0 0 18px;
-  color: var(--blue);
-  font-size: 18px;
-  line-height: 1;
 }
 
 .downloads a:hover {
