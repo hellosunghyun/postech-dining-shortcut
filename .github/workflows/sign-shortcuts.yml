@@ -1,0 +1,29 @@
+name: Sign Shortcuts
+
+on:
+  workflow_dispatch:
+
+jobs:
+  sign:
+    runs-on: [self-hosted, macOS]
+    steps:
+      - uses: actions/checkout@v4
+      - name: Prepare output directory
+        run: mkdir -p shortcuts/signed
+      - name: Sign shortcut files
+        run: |
+          found=0
+          for input in shortcuts/unsigned/*.shortcut; do
+            [ -e "$input" ] || continue
+            found=1
+            output="shortcuts/signed/$(basename "$input")"
+            shortcuts sign --mode anyone --input "$input" --output "$output"
+          done
+          if [ "$found" -eq 0 ]; then
+            echo "No unsigned shortcut files found in shortcuts/unsigned"
+            exit 1
+          fi
+      - uses: actions/upload-artifact@v4
+        with:
+          name: signed-shortcuts
+          path: shortcuts/signed/*.shortcut

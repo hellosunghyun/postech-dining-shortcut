@@ -1,0 +1,52 @@
+{
+  "apiBaseUrl": "https://food.podac.poapper.com/v1/menus/period",
+  "timezone": "Asia/Seoul",
+  "shortcutNames": {
+    "breakfast": "POSTECH 오늘 조식",
+    "lunch": "POSTECH 오늘 점심",
+    "dinner": "POSTECH 오늘 저녁",
+    "all": "POSTECH 오늘 전체 식사"
+  },
+  "meals": {
+    "breakfast": {
+      "title": "조식",
+      "types": [
+        {
+          "key": "BREAKFAST_A",
+          "label": "A"
+        },
+        {
+          "key": "BREAKFAST_B",
+          "label": "B"
+        }
+      ]
+    },
+    "lunch": {
+      "title": "점심",
+      "types": [
+        {
+          "key": "LUNCH",
+          "label": ""
+        }
+      ]
+    },
+    "dinner": {
+      "title": "저녁",
+      "types": [
+        {
+          "key": "DINNER",
+          "label": ""
+        }
+      ]
+    }
+  },
+  "mealOrder": [
+    "breakfast",
+    "lunch",
+    "dinner"
+  ],
+  "emptyText": "등록된 식단이 없습니다.",
+  "includeNutrition": true,
+  "includeEnglishNames": false,
+  "veganMark": "🌱"
+}
