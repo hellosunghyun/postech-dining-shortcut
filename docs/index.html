@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>POSTECH Dining Shortcuts</title>
+    <title>POSTECH 식단 단축어</title>
     <meta
       name="description"
       content="POSTECH 학생식당 조식, 점심, 저녁 메뉴를 확인하는 Apple Shortcuts 다운로드 페이지"
@@ -11,90 +11,34 @@
     <link rel="stylesheet" href="./styles.css" />
   </head>
   <body>
-    <header class="site-nav" aria-label="site">
-      <a class="brand" href="./">POSTECH Dining</a>
-      <nav>
-        <a href="#download">다운로드</a>
-        <a href="./api/today.json">API</a>
-        <a href="https://github.com/hellosunghyun/postech-dining-shortcut">GitHub</a>
-      </nav>
-    </header>
-
     <main>
-      <section class="hero">
-        <div class="hero-copy">
-          <h1>오늘 식단을<br />단축어 하나로.</h1>
-          <p>
-            조식, 점심, 저녁, 전체 식사를 바로 확인합니다. GitHub Pages 캐시를 먼저 쓰고,
-            문제가 있으면 POSTECH 원본 API로 전환합니다.
-          </p>
-          <a class="hero-button" href="#download">단축어 선택하기</a>
-        </div>
-      </section>
+      <h1>POSTECH 식단 단축어</h1>
+      <p>원하는 단축어를 열어 설치하세요.</p>
 
-      <section class="downloads" id="download" aria-labelledby="download-title">
-        <div class="section-head">
-          <h2 id="download-title">원하는 단축어를 바로 열기</h2>
-          <p>zip 없이 각 파일을 개별로 배포합니다.</p>
-        </div>
+      <ul class="downloads">
+        <li>
+          <a href="https://github.com/hellosunghyun/postech-dining-shortcut/releases/download/latest/postech-breakfast.shortcut">
+            오늘 조식
+          </a>
+        </li>
+        <li>
+          <a href="https://github.com/hellosunghyun/postech-dining-shortcut/releases/download/latest/postech-lunch.shortcut">
+            오늘 점심
+          </a>
+        </li>
+        <li>
+          <a href="https://github.com/hellosunghyun/postech-dining-shortcut/releases/download/latest/postech-dinner.shortcut">
+            오늘 저녁
+          </a>
+        </li>
+        <li>
+          <a href="https://github.com/hellosunghyun/postech-dining-shortcut/releases/download/latest/postech-all.shortcut">
+            오늘 전체 식사
+          </a>
+        </li>
+      </ul>
 
-        <div class="download-grid">
-          <article class="shortcut-card">
-            <div class="icon morning" aria-hidden="true">아</div>
-            <h3>오늘 조식</h3>
-            <p>조식 A/B 메뉴와 열량, 단백질을 확인합니다.</p>
-            <a href="https://github.com/hellosunghyun/postech-dining-shortcut/releases/download/latest/postech-breakfast.shortcut">
-              바로 열기
-            </a>
-            <span class="file-name">postech-breakfast.shortcut</span>
-          </article>
-
-          <article class="shortcut-card">
-            <div class="icon lunch" aria-hidden="true">점</div>
-            <h3>오늘 점심</h3>
-            <p>학생식당 점심 메뉴를 간단하게 가져옵니다.</p>
-            <a href="https://github.com/hellosunghyun/postech-dining-shortcut/releases/download/latest/postech-lunch.shortcut">
-              바로 열기
-            </a>
-            <span class="file-name">postech-lunch.shortcut</span>
-          </article>
-
-          <article class="shortcut-card">
-            <div class="icon dinner" aria-hidden="true">저</div>
-            <h3>오늘 저녁</h3>
-            <p>저녁 메뉴를 확인하고 클립보드에 복사합니다.</p>
-            <a href="https://github.com/hellosunghyun/postech-dining-shortcut/releases/download/latest/postech-dinner.shortcut">
-              바로 열기
-            </a>
-            <span class="file-name">postech-dinner.shortcut</span>
-          </article>
-
-          <article class="shortcut-card featured">
-            <div class="icon all" aria-hidden="true">전체</div>
-            <h3>오늘 전체 식사</h3>
-            <p>하루의 조식, 점심, 저녁을 한 번에 봅니다.</p>
-            <a href="https://github.com/hellosunghyun/postech-dining-shortcut/releases/download/latest/postech-all.shortcut">
-              바로 열기
-            </a>
-            <span class="file-name">postech-all.shortcut</span>
-          </article>
-        </div>
-      </section>
-
-      <section class="info">
-        <div>
-          <h2>매일 00:00 캐시</h2>
-          <p>
-            GitHub Actions가 한국시간 자정에 POSTECH 메뉴를 가져와 Pages API로 게시합니다.
-            단축어는 캐시 날짜가 오늘인지 확인한 뒤 사용합니다.
-          </p>
-        </div>
-        <div class="links">
-          <a href="./api/today.json">today.json</a>
-          <a href="./version.json">version.json</a>
-          <a href="https://github.com/hellosunghyun/postech-dining-shortcut/actions">Actions</a>
-        </div>
-      </section>
+      <p class="note">설치 후 iOS 자동화에서 원하는 시간에 실행하도록 연결하면 됩니다.</p>
     </main>
   </body>
 </html>
