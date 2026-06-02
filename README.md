@@ -55,6 +55,8 @@ Cherri로 실제 `.shortcut` 파일을 만든다.
 
 - [POSTECH Dining Shortcuts](https://hellosunghyun.github.io/postech-dining-shortcut/)
 
+다운로드 페이지의 단축어 이름 링크는 `shortcuts://import-shortcut`으로 단축어 앱 열기를 먼저 시도한다. iOS 버전이나 브라우저 설정 때문에 열리지 않으면 각 항목의 `파일 다운로드` 링크를 사용한다.
+
 최신 빌드 파일:
 
 - [postech-breakfast.shortcut](https://github.com/hellosunghyun/postech-dining-shortcut/releases/download/latest/postech-breakfast.shortcut)
