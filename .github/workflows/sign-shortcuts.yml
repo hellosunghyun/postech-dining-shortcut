@@ -31,7 +31,13 @@ jobs:
           brew install electrikmilk/cherri/cherri
       - name: Build signed shortcut files
         run: |
-          bash scripts/build-shortcuts.sh signed shortcuts/build
+          if bash scripts/build-shortcuts.sh signed shortcuts/build; then
+            exit 0
+          fi
+
+          echo "Signing failed on the GitHub-hosted runner. Reusing committed Pages shortcut files."
+          mkdir -p shortcuts/build
+          cp docs/downloads/*.shortcut shortcuts/build/
       - name: Copy shortcut files for Pages
         if: github.ref == 'refs/heads/main'
         run: |
