@@ -55,14 +55,14 @@ Cherri로 실제 `.shortcut` 파일을 만든다.
 
 - [POSTECH Dining Shortcuts](https://hellosunghyun.github.io/postech-dining-shortcut/)
 
-다운로드 페이지의 단축어 이름 링크는 `shortcuts://import-shortcut`으로 단축어 앱 열기를 먼저 시도한다. iOS 버전이나 브라우저 설정 때문에 열리지 않으면 각 항목의 `파일 다운로드` 링크를 사용한다.
+다운로드 페이지의 단축어 이름 링크는 `shortcuts://import-shortcut`으로 GitHub Pages에 배포된 `.shortcut` 파일을 단축어 앱에서 여는 방식을 먼저 시도한다. iOS 버전이나 브라우저 설정 때문에 열리지 않으면 각 항목의 다운로드 아이콘을 사용한다.
 
 최신 빌드 파일:
 
-- [postech-breakfast.shortcut](https://github.com/hellosunghyun/postech-dining-shortcut/releases/download/latest/postech-breakfast.shortcut)
-- [postech-lunch.shortcut](https://github.com/hellosunghyun/postech-dining-shortcut/releases/download/latest/postech-lunch.shortcut)
-- [postech-dinner.shortcut](https://github.com/hellosunghyun/postech-dining-shortcut/releases/download/latest/postech-dinner.shortcut)
-- [postech-all.shortcut](https://github.com/hellosunghyun/postech-dining-shortcut/releases/download/latest/postech-all.shortcut)
+- [postech-breakfast.shortcut](https://hellosunghyun.github.io/postech-dining-shortcut/downloads/postech-breakfast.shortcut)
+- [postech-lunch.shortcut](https://hellosunghyun.github.io/postech-dining-shortcut/downloads/postech-lunch.shortcut)
+- [postech-dinner.shortcut](https://hellosunghyun.github.io/postech-dining-shortcut/downloads/postech-dinner.shortcut)
+- [postech-all.shortcut](https://hellosunghyun.github.io/postech-dining-shortcut/downloads/postech-all.shortcut)
 
 ```bash
 brew tap electrikmilk/cherri
@@ -79,6 +79,7 @@ npm run build:shortcuts
 - `shortcuts/manifest.json`: 배포할 단축어 목록
 - `shortcuts/src/`: Cherri 단축어 소스
 - `shortcuts/build/`: 빌드된 `.shortcut` 파일
+- `docs/downloads/`: GitHub Pages에 배포되는 signed `.shortcut` 파일
 - `.github/workflows/verify.yml`: API/포맷 검증
 - `.github/workflows/cache-menu.yml`: 매일 메뉴 캐시 커밋
 - `.github/workflows/sign-shortcuts.yml`: GitHub-hosted macOS에서 `.shortcut` 빌드/서명

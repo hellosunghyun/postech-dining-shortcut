@@ -2,10 +2,10 @@
   "version": "0.5.0",
   "downloadPage": "https://hellosunghyun.github.io/postech-dining-shortcut/",
   "shortcuts": {
-    "breakfast": "https://github.com/hellosunghyun/postech-dining-shortcut/releases/download/latest/postech-breakfast.shortcut",
-    "lunch": "https://github.com/hellosunghyun/postech-dining-shortcut/releases/download/latest/postech-lunch.shortcut",
-    "dinner": "https://github.com/hellosunghyun/postech-dining-shortcut/releases/download/latest/postech-dinner.shortcut",
-    "all": "https://github.com/hellosunghyun/postech-dining-shortcut/releases/download/latest/postech-all.shortcut"
+    "breakfast": "https://hellosunghyun.github.io/postech-dining-shortcut/downloads/postech-breakfast.shortcut",
+    "lunch": "https://hellosunghyun.github.io/postech-dining-shortcut/downloads/postech-lunch.shortcut",
+    "dinner": "https://hellosunghyun.github.io/postech-dining-shortcut/downloads/postech-dinner.shortcut",
+    "all": "https://hellosunghyun.github.io/postech-dining-shortcut/downloads/postech-all.shortcut"
   },
   "cacheApi": "https://hellosunghyun.github.io/postech-dining-shortcut/api/today.json",
   "releasePage": "https://github.com/hellosunghyun/postech-dining-shortcut/releases/tag/latest",
