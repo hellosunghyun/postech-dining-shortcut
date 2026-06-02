@@ -1,22 +1,22 @@
 {
   "shortcuts": [
     {
-      "name": "POSTECH 오늘 조식",
+      "name": "포스텍 아침",
       "meal": "breakfast",
       "description": "오늘 학생식당 조식 A/B 메뉴를 보냅니다."
     },
     {
-      "name": "POSTECH 오늘 점심",
+      "name": "포스텍 점심",
       "meal": "lunch",
       "description": "오늘 학생식당 점심 메뉴를 보냅니다."
     },
     {
-      "name": "POSTECH 오늘 저녁",
+      "name": "포스텍 저녁",
       "meal": "dinner",
       "description": "오늘 학생식당 저녁 메뉴를 보냅니다."
     },
     {
-      "name": "POSTECH 오늘 전체 식사",
+      "name": "포스텍 밥",
       "meal": "all",
       "description": "오늘 조식, 점심, 저녁 메뉴를 한 번에 보냅니다."
     }

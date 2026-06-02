@@ -2,10 +2,10 @@
   "apiBaseUrl": "https://food.podac.poapper.com/v1/menus/period",
   "timezone": "Asia/Seoul",
   "shortcutNames": {
-    "breakfast": "POSTECH 오늘 조식",
-    "lunch": "POSTECH 오늘 점심",
-    "dinner": "POSTECH 오늘 저녁",
-    "all": "POSTECH 오늘 전체 식사"
+    "breakfast": "포스텍 아침",
+    "lunch": "포스텍 점심",
+    "dinner": "포스텍 저녁",
+    "all": "포스텍 밥"
   },
   "meals": {
     "breakfast": {

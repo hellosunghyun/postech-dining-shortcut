@@ -3,14 +3,14 @@
 #include 'actions/sharing'
 #include 'actions/text'
 
-#define name POSTECH 오늘 점심
+#define name 포스텍 점심
 #define color green
 #define mac false
 
 @now = currentDate()
 @today = formatDate(@now, "Custom", "yyyyMMdd")
 @displayDate = formatDate(@now, "Custom", "yyyy-MM-dd")
-@installedVersion = "0.3.0"
+@installedVersion = "0.4.0"
 @versionManifest = downloadURL("https://hellosunghyun.github.io/postech-dining-shortcut/version.json")
 @rawLatestVersion = @versionManifest['version']
 @latestVersion = getText(@rawLatestVersion)
@@ -28,7 +28,7 @@ if @menuCount == 0 {
     @originUrl = "https://food.podac.poapper.com/v1/menus/period/{@today}/{@today}"
     @menus = downloadURL(@originUrl)
 }
-@output = "POSTECH 오늘 점심 ({@displayDate})\n"
+@output = "포스텍 점심 ({@displayDate})\n"
 if @latestVersion != @installedVersion {
     @rawDownloadPage = @versionManifest['downloadPage']
     @downloadPage = getText(@rawDownloadPage)
