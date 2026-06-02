@@ -23,17 +23,33 @@ function normalizeDate(value) {
 }
 
 async function fetchMenu(date) {
-  const response = await fetch(`${API_BASE_URL}/${date}/${date}`, {
-    headers: { "Content-Type": "application/json" }
-  });
-  if (!response.ok) {
-    throw new Error(`POSTECH menu API failed: ${response.status} ${response.statusText}`);
+  const url = `${API_BASE_URL}/${date}/${date}`;
+  let lastError;
+
+  for (let attempt = 1; attempt <= 3; attempt += 1) {
+    try {
+      const response = await fetch(url, {
+        headers: { "Content-Type": "application/json" }
+      });
+
+      if (!response.ok) {
+        throw new Error(`POSTECH menu API failed: ${response.status} ${response.statusText}`);
+      }
+
+      const menus = await response.json();
+      if (!Array.isArray(menus)) {
+        throw new Error("POSTECH menu API returned a non-array payload.");
+      }
+      return menus;
+    } catch (error) {
+      lastError = error;
+      if (attempt < 3) {
+        await new Promise((resolve) => setTimeout(resolve, attempt * 3000));
+      }
+    }
   }
-  const menus = await response.json();
-  if (!Array.isArray(menus)) {
-    throw new Error("POSTECH menu API returned a non-array payload.");
-  }
-  return menus;
+
+  throw lastError;
 }
 
 async function main() {

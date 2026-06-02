@@ -19,7 +19,7 @@ POSTECH dining 페이지의 `weekly-menu.js`가 호출하는 API를 사용한다
 https://food.podac.poapper.com/v1/menus/period/{YYYYMMDD}/{YYYYMMDD}
 ```
 
-GitHub Actions가 매일 한국시간 00:05에 메뉴를 가져와 `docs/api/`에 캐시한다.
+GitHub Actions가 매일 한국시간 00:00에 메뉴를 가져와 `docs/api/`에 캐시한다.
 
 Pages API:
 
