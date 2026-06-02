@@ -23,6 +23,7 @@ jobs:
       - name: Build signed shortcut files
         run: |
           bash scripts/build-shortcuts.sh signed shortcuts/build
+          ditto -c -k shortcuts/build shortcuts/postech-dining-shortcuts.zip
       - uses: actions/upload-artifact@v4
         with:
           name: postech-dining-shortcuts
@@ -41,5 +42,5 @@ jobs:
             - POSTECH 오늘 점심.shortcut
             - POSTECH 오늘 저녁.shortcut
             - POSTECH 오늘 전체 식사.shortcut
-          files: shortcuts/build/*.shortcut
+          files: shortcuts/postech-dining-shortcuts.zip
           make_latest: true
