@@ -1,6 +1,6 @@
 {
   "name": "postech-dining-shortcut",
-  "version": "0.5.0",
+  "version": "0.6.0",
   "private": true,
   "description": "POSTECH dining menu helpers for Apple Shortcuts.",
   "type": "module",

@@ -10,7 +10,7 @@
 @now = currentDate()
 @today = formatDate(@now, "Custom", "yyyyMMdd")
 @displayDate = formatDate(@now, "Custom", "yyyy-MM-dd")
-@installedVersion = "0.5.0"
+@installedVersion = "0.6.0"
 @versionManifest = downloadURL("https://hellosunghyun.github.io/postech-dining-shortcut/version.json")
 @rawLatestVersion = @versionManifest['version']
 @latestVersion = getText(@rawLatestVersion)
@@ -126,5 +126,4 @@ if @foundDinner == false {
     @output += "\n저녁\n등록된 식단이 없습니다.\n"
 }
 
-setClipboard(@output)
-show(@output)
+alert(@output, "포스텍 밥")
