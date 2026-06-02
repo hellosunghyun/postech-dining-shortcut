@@ -8,6 +8,9 @@ on:
       - ".github/workflows/sign-shortcuts.yml"
   workflow_dispatch:
 
+permissions:
+  contents: write
+
 jobs:
   build:
     runs-on: macos-latest
@@ -24,3 +27,19 @@ jobs:
         with:
           name: postech-dining-shortcuts
           path: shortcuts/build/*.shortcut
+      - name: Publish latest release
+        if: github.ref == 'refs/heads/main'
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: latest
+          name: Latest Shortcuts
+          body: |
+            자동 생성된 POSTECH dining 단축어입니다.
+
+            포함 파일:
+            - POSTECH 오늘 조식.shortcut
+            - POSTECH 오늘 점심.shortcut
+            - POSTECH 오늘 저녁.shortcut
+            - POSTECH 오늘 전체 식사.shortcut
+          files: shortcuts/build/*.shortcut
+          make_latest: true
