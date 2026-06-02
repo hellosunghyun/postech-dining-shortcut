@@ -81,7 +81,7 @@ function formatType(menu, typeConfig, config) {
 
   const foods = menu.foods.map((food) => formatFood(food, config)).join(", ");
   const nutrition = config.includeNutrition
-    ? ` (${menu.kcal ?? 0}kcal, 단백질 ${menu.protein ?? 0}g)`
+    ? ` (칼로리 ${menu.kcal ?? 0}kcal, 프로틴 ${menu.protein ?? 0}g)`
     : "";
 
   return `${label}${foods}${nutrition}`;

@@ -62,7 +62,6 @@ async function main() {
   await fs.mkdir(API_DIR, { recursive: true });
   const payload = {
     date,
-    source: `${API_BASE_URL}/${date}/${date}`,
     cachedAt: new Date().toISOString(),
     timezone: "Asia/Seoul",
     menus
