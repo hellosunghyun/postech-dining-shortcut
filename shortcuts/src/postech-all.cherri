@@ -1,0 +1,108 @@
+#include 'actions/calendar'
+#include 'actions/web'
+#include 'actions/sharing'
+#include 'actions/text'
+
+#define name POSTECH 오늘 전체 식사
+#define color teal
+#define mac false
+
+@now = currentDate()
+@today = formatDate(@now, "Custom", "yyyyMMdd")
+@displayDate = formatDate(@now, "Custom", "yyyy-MM-dd")
+@apiUrl = "https://food.podac.poapper.com/v1/menus/period/{@today}/{@today}"
+@menus = downloadURL(@apiUrl)
+@output = "POSTECH 오늘 전체 식사 ({@displayDate})\n"
+@foundBreakfast = false
+@foundLunch = false
+@foundDinner = false
+
+for menu in @menus {
+    @rawType = @menu['type']
+    @type = getText(@rawType)
+    if @type == "BREAKFAST_A" {
+        @foundBreakfast = true
+        @output += "\n조식 A\n"
+        @foods = @menu['foods']
+        for food in @foods {
+            @rawName = @food['name_kor']
+            @name = getText(@rawName)
+            @output += "- {@name}\n"
+        }
+        @rawKcal = @menu['kcal']
+        @rawProtein = @menu['protein']
+        @kcal = getText(@rawKcal)
+        @protein = getText(@rawProtein)
+        @output += "열량: {@kcal}kcal / 단백질: {@protein}g\n"
+    }
+    if @type == "BREAKFAST_B" {
+        @foundBreakfast = true
+        @output += "\n조식 B\n"
+        @foods = @menu['foods']
+        for food in @foods {
+            @rawName = @food['name_kor']
+            @name = getText(@rawName)
+            @output += "- {@name}\n"
+        }
+        @rawKcal = @menu['kcal']
+        @rawProtein = @menu['protein']
+        @kcal = getText(@rawKcal)
+        @protein = getText(@rawProtein)
+        @output += "열량: {@kcal}kcal / 단백질: {@protein}g\n"
+    }
+}
+
+if @foundBreakfast == false {
+    @output += "\n조식\n등록된 식단이 없습니다.\n"
+}
+
+for menu in @menus {
+    @rawType = @menu['type']
+    @type = getText(@rawType)
+    if @type == "LUNCH" {
+        @foundLunch = true
+        @output += "\n점심\n"
+        @foods = @menu['foods']
+        for food in @foods {
+            @rawName = @food['name_kor']
+            @name = getText(@rawName)
+            @output += "- {@name}\n"
+        }
+        @rawKcal = @menu['kcal']
+        @rawProtein = @menu['protein']
+        @kcal = getText(@rawKcal)
+        @protein = getText(@rawProtein)
+        @output += "열량: {@kcal}kcal / 단백질: {@protein}g\n"
+    }
+}
+
+if @foundLunch == false {
+    @output += "\n점심\n등록된 식단이 없습니다.\n"
+}
+
+for menu in @menus {
+    @rawType = @menu['type']
+    @type = getText(@rawType)
+    if @type == "DINNER" {
+        @foundDinner = true
+        @output += "\n저녁\n"
+        @foods = @menu['foods']
+        for food in @foods {
+            @rawName = @food['name_kor']
+            @name = getText(@rawName)
+            @output += "- {@name}\n"
+        }
+        @rawKcal = @menu['kcal']
+        @rawProtein = @menu['protein']
+        @kcal = getText(@rawKcal)
+        @protein = getText(@rawProtein)
+        @output += "열량: {@kcal}kcal / 단백질: {@protein}g\n"
+    }
+}
+
+if @foundDinner == false {
+    @output += "\n저녁\n등록된 식단이 없습니다.\n"
+}
+
+setClipboard(@output)
+show(@output)

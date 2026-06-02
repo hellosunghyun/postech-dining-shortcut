@@ -1,0 +1,42 @@
+#include 'actions/calendar'
+#include 'actions/web'
+#include 'actions/sharing'
+#include 'actions/text'
+
+#define name POSTECH 오늘 점심
+#define color green
+#define mac false
+
+@now = currentDate()
+@today = formatDate(@now, "Custom", "yyyyMMdd")
+@displayDate = formatDate(@now, "Custom", "yyyy-MM-dd")
+@apiUrl = "https://food.podac.poapper.com/v1/menus/period/{@today}/{@today}"
+@menus = downloadURL(@apiUrl)
+@output = "POSTECH 오늘 점심 ({@displayDate})\n"
+@found = false
+
+for menu in @menus {
+    @rawType = @menu['type']
+    @type = getText(@rawType)
+    if @type == "LUNCH" {
+        @found = true
+        @foods = @menu['foods']
+        for food in @foods {
+            @rawName = @food['name_kor']
+            @name = getText(@rawName)
+            @output += "- {@name}\n"
+        }
+        @rawKcal = @menu['kcal']
+        @rawProtein = @menu['protein']
+        @kcal = getText(@rawKcal)
+        @protein = getText(@rawProtein)
+        @output += "열량: {@kcal}kcal / 단백질: {@protein}g\n"
+    }
+}
+
+if @found == false {
+    @output += "\n등록된 식단이 없습니다.\n"
+}
+
+setClipboard(@output)
+show(@output)

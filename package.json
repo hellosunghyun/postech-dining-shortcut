@@ -5,6 +5,7 @@
   "description": "POSTECH dining menu helpers for Apple Shortcuts.",
   "type": "module",
   "scripts": {
+    "build:shortcuts": "bash scripts/build-shortcuts.sh unsigned shortcuts/build",
     "menu": "node scripts/render-menu.mjs",
     "verify": "node scripts/render-menu.mjs --date 20260602 --meal all"
   },

@@ -1,29 +1,26 @@
-name: Sign Shortcuts
+name: Build Shortcuts
 
 on:
+  push:
+    paths:
+      - "shortcuts/src/**"
+      - "scripts/build-shortcuts.sh"
+      - ".github/workflows/sign-shortcuts.yml"
   workflow_dispatch:
 
 jobs:
-  sign:
-    runs-on: [self-hosted, macOS]
+  build:
+    runs-on: macos-latest
     steps:
       - uses: actions/checkout@v4
-      - name: Prepare output directory
-        run: mkdir -p shortcuts/signed
-      - name: Sign shortcut files
+      - name: Install Cherri
         run: |
-          found=0
-          for input in shortcuts/unsigned/*.shortcut; do
-            [ -e "$input" ] || continue
-            found=1
-            output="shortcuts/signed/$(basename "$input")"
-            shortcuts sign --mode anyone --input "$input" --output "$output"
-          done
-          if [ "$found" -eq 0 ]; then
-            echo "No unsigned shortcut files found in shortcuts/unsigned"
-            exit 1
-          fi
+          brew tap electrikmilk/cherri
+          brew install electrikmilk/cherri/cherri
+      - name: Build signed shortcut files
+        run: |
+          bash scripts/build-shortcuts.sh signed shortcuts/build
       - uses: actions/upload-artifact@v4
         with:
-          name: signed-shortcuts
-          path: shortcuts/signed/*.shortcut
+          name: postech-dining-shortcuts
+          path: shortcuts/build/*.shortcut

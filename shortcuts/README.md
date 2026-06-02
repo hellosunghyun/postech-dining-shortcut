@@ -26,10 +26,12 @@
 6. `foods.name_kor`, `kcal`, `protein`을 텍스트로 조립한다.
 7. 결과를 `빠른 보기`, `알림 보기`, `클립보드 복사`, `메시지 보내기` 중 원하는 액션으로 전달한다.
 
-## 서명
+## 빌드/서명
 
-수동으로 만든 unsigned `.shortcut` 파일은 self-hosted macOS runner에서 다음 명령으로 서명한다.
+소스는 `shortcuts/src/*.cherri`에 있다.
 
 ```bash
-shortcuts sign --mode anyone --input shortcuts/unsigned/POSTECH오늘조식.shortcut --output shortcuts/signed/POSTECH오늘조식.shortcut
+npm run build:shortcuts
 ```
+
+GitHub Actions는 public repo의 GitHub-hosted macOS runner에서 signed artifact를 생성한다.
