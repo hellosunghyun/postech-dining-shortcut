@@ -45,6 +45,10 @@ npm run menu -- --date 20260602 --meal all
 
 Cherri로 실제 `.shortcut` 파일을 만든다.
 
+다운로드 페이지:
+
+- [POSTECH Dining Shortcuts](https://hellosunghyun.github.io/postech-dining-shortcut/)
+
 최신 빌드 파일:
 
 - [postech-dining-shortcuts.zip](https://github.com/hellosunghyun/postech-dining-shortcut/releases/download/latest/postech-dining-shortcuts.zip)
@@ -69,7 +73,9 @@ npm run build:shortcuts
 
 ## 자동화 배포 제한
 
-단축어 파일은 공유/서명할 수 있지만, 개인 자동화 트리거 자체는 사용자가 각 기기에서 직접 만들어야 한다.
+단축어 파일은 공유/서명할 수 있지만, 개인 자동화 트리거 자체는 사용자가 각 기기에서 직접 만들어야 한다. 또한 iOS Shortcuts는 사용자 확인 없이 설치된 단축어를 무음 교체할 수 없다.
+
+대신 각 단축어는 실행 시 GitHub Pages의 `version.json`을 확인한다. 새 버전이 있으면 다운로드 페이지를 자동으로 열어 업데이트를 안내한다.
 
 권장 자동화:
 

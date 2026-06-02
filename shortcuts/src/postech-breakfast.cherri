@@ -10,9 +10,19 @@
 @now = currentDate()
 @today = formatDate(@now, "Custom", "yyyyMMdd")
 @displayDate = formatDate(@now, "Custom", "yyyy-MM-dd")
+@installedVersion = "0.2.0"
+@versionManifest = downloadURL("https://hellosunghyun.github.io/postech-dining-shortcut/version.json")
+@rawLatestVersion = @versionManifest['version']
+@latestVersion = getText(@rawLatestVersion)
 @apiUrl = "https://food.podac.poapper.com/v1/menus/period/{@today}/{@today}"
 @menus = downloadURL(@apiUrl)
 @output = "POSTECH 오늘 조식 ({@displayDate})\n"
+if @latestVersion != @installedVersion {
+    @rawDownloadPage = @versionManifest['downloadPage']
+    @downloadPage = getText(@rawDownloadPage)
+    @output += "새 버전 {@latestVersion}이 있습니다. 다운로드 페이지를 엽니다.\n현재 버전: {@installedVersion}\n\n"
+    openURL(@downloadPage)
+}
 @found = false
 
 for menu in @menus {
