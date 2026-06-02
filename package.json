@@ -1,13 +1,14 @@
 {
   "name": "postech-dining-shortcut",
-  "version": "0.1.0",
+  "version": "0.3.0",
   "private": true,
   "description": "POSTECH dining menu helpers for Apple Shortcuts.",
   "type": "module",
   "scripts": {
     "build:shortcuts": "bash scripts/build-shortcuts.sh unsigned shortcuts/build",
+    "cache": "node scripts/cache-menu.mjs",
     "menu": "node scripts/render-menu.mjs",
-    "verify": "node scripts/render-menu.mjs --date 20260602 --meal all"
+    "verify": "node scripts/render-menu.mjs --date 20260602 --meal all && node scripts/cache-menu.mjs --date 20260602"
   },
   "engines": {
     "node": ">=20"

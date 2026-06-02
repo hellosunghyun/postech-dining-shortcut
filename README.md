@@ -19,6 +19,15 @@ POSTECH dining 페이지의 `weekly-menu.js`가 호출하는 API를 사용한다
 https://food.podac.poapper.com/v1/menus/period/{YYYYMMDD}/{YYYYMMDD}
 ```
 
+GitHub Actions가 매일 한국시간 00:05에 메뉴를 가져와 `docs/api/`에 캐시한다.
+
+Pages API:
+
+- `https://hellosunghyun.github.io/postech-dining-shortcut/api/today.json`
+- `https://hellosunghyun.github.io/postech-dining-shortcut/api/{YYYYMMDD}.json`
+
+단축어는 Pages API를 먼저 사용한다. 캐시 날짜가 오늘과 다르거나 메뉴 배열이 비어 있으면 POSTECH 원본 API로 fallback한다.
+
 학생식당 타입:
 
 - `BREAKFAST_A`
@@ -69,6 +78,7 @@ npm run build:shortcuts
 - `shortcuts/src/`: Cherri 단축어 소스
 - `shortcuts/build/`: 빌드된 `.shortcut` 파일
 - `.github/workflows/verify.yml`: API/포맷 검증
+- `.github/workflows/cache-menu.yml`: 매일 메뉴 캐시 커밋
 - `.github/workflows/sign-shortcuts.yml`: GitHub-hosted macOS에서 `.shortcut` 빌드/서명
 
 ## 자동화 배포 제한

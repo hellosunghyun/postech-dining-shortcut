@@ -1,0 +1,237 @@
+{
+  "date": "20260602",
+  "source": "https://food.podac.poapper.com/v1/menus/period/20260602/20260602",
+  "cachedAt": "2026-06-02T02:42:35.207Z",
+  "timezone": "Asia/Seoul",
+  "menus": [
+    {
+      "id": 11154,
+      "date": 20260602,
+      "type": "BREAKFAST_A",
+      "foods": [
+        {
+          "id": 1748,
+          "name_kor": "바지락된장찌개",
+          "name_eng": "Manila Clam Soybean Paste Stew",
+          "isVegan": false,
+          "isMain": false
+        },
+        {
+          "id": 6984,
+          "name_kor": "시래기돈사태찜",
+          "name_eng": "Stir-fried Siraegi & Perilla Seed Paste",
+          "isVegan": false,
+          "isMain": false
+        },
+        {
+          "id": 6741,
+          "name_kor": "어떡햄볶음",
+          "name_eng": "Stir-fried Fish Cake with Ham",
+          "isVegan": false,
+          "isMain": false
+        },
+        {
+          "id": 962,
+          "name_kor": "단배추겉절이",
+          "name_eng": "Dried Radish Salad",
+          "isVegan": true,
+          "isMain": false
+        }
+      ],
+      "kcal": 1512,
+      "protein": 63
+    },
+    {
+      "id": 11155,
+      "date": 20260602,
+      "type": "BREAKFAST_B",
+      "foods": [
+        {
+          "id": 182,
+          "name_kor": "미니브런치",
+          "name_eng": "Mini Brunch",
+          "isVegan": false,
+          "isMain": false
+        }
+      ],
+      "kcal": 498,
+      "protein": 10
+    },
+    {
+      "id": 11156,
+      "date": 20260602,
+      "type": "LUNCH",
+      "foods": [
+        {
+          "id": 5025,
+          "name_kor": "청국장찌개",
+          "name_eng": "Cheonggukjang Stew",
+          "isVegan": false,
+          "isMain": false
+        },
+        {
+          "id": 4466,
+          "name_kor": "청양풍닭갈비",
+          "name_eng": "Cheongyang-style Dakgalbi",
+          "isVegan": false,
+          "isMain": false
+        },
+        {
+          "id": 290,
+          "name_kor": "도토리묵&양념장",
+          "name_eng": "Acorn Jelly with Seasoned Soy Sauce",
+          "isVegan": true,
+          "isMain": false
+        },
+        {
+          "id": 6674,
+          "name_kor": "상추유자무침",
+          "name_eng": "Lettuce Salad with Yuja Dressing",
+          "isVegan": true,
+          "isMain": false
+        }
+      ],
+      "kcal": 1167,
+      "protein": 58
+    },
+    {
+      "id": 11157,
+      "date": 20260602,
+      "type": "DINNER",
+      "foods": [
+        {
+          "id": 719,
+          "name_kor": "두부계란국",
+          "name_eng": "Tofu Egg Soup",
+          "isVegan": false,
+          "isMain": false
+        },
+        {
+          "id": 360,
+          "name_kor": "양념삼겹살볶음",
+          "name_eng": "Stir-fried Seasoned Pork Belly",
+          "isVegan": false,
+          "isMain": false
+        },
+        {
+          "id": 6478,
+          "name_kor": "어묵감자채볶음",
+          "name_eng": "Stir-fried Fish Cake and Shredded Potatoes",
+          "isVegan": false,
+          "isMain": false
+        },
+        {
+          "id": 1792,
+          "name_kor": "근대된장나물",
+          "name_eng": "Seasoned Swiss Chard with Soybean Paste",
+          "isVegan": true,
+          "isMain": false
+        }
+      ],
+      "kcal": 1330,
+      "protein": 51
+    },
+    {
+      "id": 11178,
+      "date": 20260602,
+      "type": "STAFF",
+      "foods": [
+        {
+          "id": 5025,
+          "name_kor": "청국장찌개",
+          "name_eng": "Cheonggukjang Stew",
+          "isVegan": false,
+          "isMain": false
+        },
+        {
+          "id": 4466,
+          "name_kor": "청양풍닭갈비",
+          "name_eng": "Cheongyang-style Dakgalbi",
+          "isVegan": false,
+          "isMain": false
+        },
+        {
+          "id": 290,
+          "name_kor": "도토리묵&양념장",
+          "name_eng": "Acorn Jelly with Seasoned Soy Sauce",
+          "isVegan": true,
+          "isMain": false
+        },
+        {
+          "id": 6674,
+          "name_kor": "상추유자무침",
+          "name_eng": "Lettuce Salad with Yuja Dressing",
+          "isVegan": true,
+          "isMain": false
+        },
+        {
+          "id": 85,
+          "name_kor": "버섯맛살볶음",
+          "name_eng": "Stir-fried Mushrooms and Crab Sticks",
+          "isVegan": false,
+          "isMain": false
+        }
+      ],
+      "kcal": 0,
+      "protein": 0
+    },
+    {
+      "id": 11182,
+      "date": 20260602,
+      "type": "INTERNATIONAL",
+      "foods": [
+        {
+          "id": 456,
+          "name_kor": "기장밥",
+          "name_eng": "Steamed Millet Rice",
+          "isVegan": true,
+          "isMain": false
+        },
+        {
+          "id": 148,
+          "name_kor": "수제비국",
+          "name_eng": "Hand-Pulled Dough Soup",
+          "isVegan": true,
+          "isMain": false
+        },
+        {
+          "id": 525,
+          "name_kor": "코다리강정",
+          "name_eng": "Sweet & Spicy Fried Pollack",
+          "isVegan": true,
+          "isMain": false
+        },
+        {
+          "id": 6917,
+          "name_kor": "해물완자전&케찹",
+          "name_eng": "Grilled Seafood Meatballs",
+          "isVegan": true,
+          "isMain": false
+        },
+        {
+          "id": 7036,
+          "name_kor": "오리엔탈파채만두",
+          "name_eng": "Fried Dumplings with Scallion & Oriental Dressing",
+          "isVegan": false,
+          "isMain": false
+        },
+        {
+          "id": 7037,
+          "name_kor": "브로콜리숙회",
+          "name_eng": "Blanched Broccoli with Gochujang",
+          "isVegan": true,
+          "isMain": false
+        },
+        {
+          "id": 5878,
+          "name_kor": "배추김치",
+          "name_eng": "Kimchi",
+          "isVegan": true,
+          "isMain": false
+        }
+      ],
+      "kcal": 0,
+      "protein": 0
+    }
+  ]
+}

@@ -10,12 +10,24 @@
 @now = currentDate()
 @today = formatDate(@now, "Custom", "yyyyMMdd")
 @displayDate = formatDate(@now, "Custom", "yyyy-MM-dd")
-@installedVersion = "0.2.0"
+@installedVersion = "0.3.0"
 @versionManifest = downloadURL("https://hellosunghyun.github.io/postech-dining-shortcut/version.json")
 @rawLatestVersion = @versionManifest['version']
 @latestVersion = getText(@rawLatestVersion)
-@apiUrl = "https://food.podac.poapper.com/v1/menus/period/{@today}/{@today}"
-@menus = downloadURL(@apiUrl)
+@cacheUrl = "https://hellosunghyun.github.io/postech-dining-shortcut/api/today.json"
+@cachePayload = downloadURL(@cacheUrl)
+@rawCacheDate = @cachePayload['date']
+@cacheDate = getText(@rawCacheDate)
+@menus = @cachePayload['menus']
+@menuCount = count(@menus)
+if @cacheDate != @today {
+    @originUrl = "https://food.podac.poapper.com/v1/menus/period/{@today}/{@today}"
+    @menus = downloadURL(@originUrl)
+}
+if @menuCount == 0 {
+    @originUrl = "https://food.podac.poapper.com/v1/menus/period/{@today}/{@today}"
+    @menus = downloadURL(@originUrl)
+}
 @output = "POSTECH 오늘 점심 ({@displayDate})\n"
 if @latestVersion != @installedVersion {
     @rawDownloadPage = @versionManifest['downloadPage']

@@ -1,7 +1,8 @@
 {
-  "version": "0.2.0",
+  "version": "0.3.0",
   "downloadPage": "https://hellosunghyun.github.io/postech-dining-shortcut/",
   "releaseZip": "https://github.com/hellosunghyun/postech-dining-shortcut/releases/download/latest/postech-dining-shortcuts.zip",
+  "cacheApi": "https://hellosunghyun.github.io/postech-dining-shortcut/api/today.json",
   "releasePage": "https://github.com/hellosunghyun/postech-dining-shortcut/releases/tag/latest",
   "repository": "https://github.com/hellosunghyun/postech-dining-shortcut",
   "updatedAt": "2026-06-02"
