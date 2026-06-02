@@ -60,7 +60,10 @@ Cherri로 실제 `.shortcut` 파일을 만든다.
 
 최신 빌드 파일:
 
-- [postech-dining-shortcuts.zip](https://github.com/hellosunghyun/postech-dining-shortcut/releases/download/latest/postech-dining-shortcuts.zip)
+- [postech-breakfast.shortcut](https://github.com/hellosunghyun/postech-dining-shortcut/releases/download/latest/postech-breakfast.shortcut)
+- [postech-lunch.shortcut](https://github.com/hellosunghyun/postech-dining-shortcut/releases/download/latest/postech-lunch.shortcut)
+- [postech-dinner.shortcut](https://github.com/hellosunghyun/postech-dining-shortcut/releases/download/latest/postech-dinner.shortcut)
+- [postech-all.shortcut](https://github.com/hellosunghyun/postech-dining-shortcut/releases/download/latest/postech-all.shortcut)
 
 ```bash
 brew tap electrikmilk/cherri
