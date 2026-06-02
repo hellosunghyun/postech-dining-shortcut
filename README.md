@@ -45,6 +45,10 @@ npm run menu -- --date 20260602 --meal all
 
 Cherri로 실제 `.shortcut` 파일을 만든다.
 
+최신 빌드 파일:
+
+- [postech-dining-shortcuts.zip](https://github.com/hellosunghyun/postech-dining-shortcut/releases/download/latest/postech-dining-shortcuts.zip)
+
 ```bash
 brew tap electrikmilk/cherri
 brew install electrikmilk/cherri/cherri
